@@ -2,11 +2,7 @@
 <!-- This model is based on the robot developed by the NuBot team, this includes all the meshes -->
 
 <robot name="tracked_vehicle" xmlns:xacro="http://www.ros.org/wiki/xacro">
-    <gazebo>
-        <gui>
-            <plugin name="keyboard" filename="libKeyboardGUIPlugin.so"/>
-        </gui>
-    </gazebo>
+
   
     <gazebo>
         <self_collide>1</self_collide>
