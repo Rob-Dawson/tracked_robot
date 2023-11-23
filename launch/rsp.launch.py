@@ -12,13 +12,15 @@ def generate_launch_description():
 #region Paths
 
     ## Global Path
-    PKG_PATH = FindPackageShare("collision_detection_bot").find("collision_detection_bot")
+    PKG_PATH = FindPackageShare("tracked_robot").find("tracked_robot")
 
     ##  Path to XACRO
     try:
         XACRO_PATH = os.path.join(PKG_PATH, "description", "robot.urdf.xacro")
+
     except FileNotFoundError:
         LogInfo("Cannot find robot file")
+
     robot_description = xacro.process_file(XACRO_PATH).toxml()
 
 #endregion

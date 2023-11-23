@@ -10,11 +10,13 @@ from launch.actions import DeclareLaunchArgument, LogInfo
 
 def generate_launch_description():
 
+
 #region Path to Files
     try:
         PKG_PATH = FindPackageShare("tracked_robot").find("tracked_robot")
     except FileNotFoundError:
         LogInfo("Cannot find package")
+
 
     ##  Path to XACRO
     try:
