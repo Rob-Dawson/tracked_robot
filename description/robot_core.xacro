@@ -92,7 +92,7 @@
             <origin xyz="0 0 0" rpy="0 0 0" />
             <material name="black"/>
             <geometry>
-                <mesh filename="$(find my_bot)/description/meshes/base_link.STL" />
+                <mesh filename="$(find tracked_robot)/description/meshes/base_link.STL" />
             </geometry>
         </visual>
     </link>
@@ -126,7 +126,7 @@
             <origin xyz="0 ${-1*track_distance} 0" rpy="0 0 0" />
             <material name="blue"/>
             <geometry>
-                <mesh filename="$(find my_bot)/description/meshes/left_track_link.STL" />
+                <mesh filename="$(find tracked_robot)/description/meshes/left_track_link.STL" />
             </geometry>
         </visual>
     
@@ -194,7 +194,7 @@
             <origin xyz="0 ${track_distance} 0" rpy="0 0 0" />
             <material name="blue"/>
             <geometry>
-                <mesh filename="$(find my_bot)/description/meshes/right_track_link.STL" />
+                <mesh filename="$(find tracked_robot)/description/meshes/right_track_link.STL" />
             </geometry>
         </visual>
     
@@ -262,7 +262,7 @@
             <origin xyz="0 ${-1*flipper_visual_bias} 0" rpy="0 0 0" />
             <material name="orange"/>
             <geometry>
-                <mesh filename="$(find my_bot)/description/meshes/back_left_fin_link.STL" />
+                <mesh filename="$(find tracked_robot)/description/meshes/back_left_fin_link.STL" />
             </geometry>
         
         </visual>
@@ -330,7 +330,7 @@
             <origin xyz="0 ${flipper_visual_bias} 0" rpy="0 0 0" />
             <material name="black"/>
             <geometry>
-                <mesh filename="$(find my_bot)/description/meshes/back_right_fin_link.STL" />
+                <mesh filename="$(find tracked_robot)/description/meshes/back_right_fin_link.STL" />
             </geometry>
         </visual>
 
@@ -394,7 +394,7 @@
             <material name="orange"/>
 
             <geometry>
-                <mesh filename="$(find my_bot)/description/meshes/front_left_fin_link.STL" />
+                <mesh filename="$(find tracked_robot)/description/meshes/front_left_fin_link.STL" />
             </geometry>
         </visual>
 
@@ -459,7 +459,7 @@
 
             <origin xyz="0 ${flipper_visual_bias} 0" rpy="0 0 0" />
             <geometry>
-                <mesh filename="$(find my_bot)/description/meshes/front_right_fin_link.STL" />
+                <mesh filename="$(find tracked_robot)/description/meshes/front_right_fin_link.STL" />
             </geometry>
         </visual>
 
