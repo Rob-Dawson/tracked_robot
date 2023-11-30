@@ -53,6 +53,8 @@ def generate_launch_description():
             'verbose':"true",
             'world': GAZEBO_WORLD}.items()
     )
+
+
 #endregion
 
 #region Nodes
@@ -64,13 +66,26 @@ def generate_launch_description():
         output="screen"
     )
 #endregion
+    joint_state_broadcaster_spawner = Node(
+        package="controller_manager",
+        executable="spawner",
+        arguments=["joint_state_broadcaster", "--controller-manager", "/controller_manager"],
+    )
 
+    robot_controller_spawner = Node(
+        package="controller_manager",
+        executable="spawner",
+        arguments=["joint_trajectory_controller", "--controller-manager", "/controller_manager"],
+    )
 
 #region Add Launch Descriptions
     ld = LaunchDescription()
     ld.add_action(rsp)
     ld.add_action(gazebo)
     ld.add_action(spawn_entity)
+    ld.add_action(joint_state_broadcaster_spawner)
+    ld.add_action(robot_controller_spawner)
+
 #endregion
 
     return ld
