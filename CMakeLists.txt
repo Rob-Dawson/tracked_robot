@@ -8,6 +8,8 @@ endif()
 # find dependencies
 find_package(ament_cmake REQUIRED)
 find_package(rclpy REQUIRED)
+find_package(rclcpp REQUIRED)
+find_package(std_msgs REQUIRED)
 
 # uncomment the following section in order to fill in
 # further dependencies manually.
@@ -24,6 +26,17 @@ if(BUILD_TESTING)
   set(ament_cmake_cpplint_FOUND TRUE)
   ament_lint_auto_find_test_dependencies()
 endif()
+
+# C++
+add_executable(control src/controller.cpp)
+
+ament_target_dependencies(control rclcpp std_msgs)
+
+install(TARGETS
+control 
+DESTINATION lib/${PROJECT_NAME}
+)
+
 ament_python_install_package(${PROJECT_NAME})
 
 install(PROGRAMS
