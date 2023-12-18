@@ -1,6 +1,5 @@
 #include <gazebo/common/Plugin.hh>
 #include <gazebo/physics/physics.hh>  // Include the physics header
-
 #include <rclcpp/rclcpp.hpp>
 namespace gazebo
 {

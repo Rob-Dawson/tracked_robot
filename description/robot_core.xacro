@@ -579,4 +579,9 @@
             <parameters>$(find tracked_robot)/config/flipper_joint.yaml</parameters>
         </plugin>   
     </gazebo>
+    
+    <gazebo>
+        <plugin filename="libhello_world.so" name="hello_world">
+        </plugin>   
+    </gazebo>
 </robot>

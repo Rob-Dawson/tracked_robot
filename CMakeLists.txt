@@ -27,27 +27,9 @@ if(BUILD_TESTING)
   ament_lint_auto_find_test_dependencies()
 endif()
 
-# C++
-add_executable(control src/controller.cpp)
-
-ament_target_dependencies(control rclcpp std_msgs)
-
-install(TARGETS
-control 
-DESTINATION lib/${PROJECT_NAME}
-)
-
-ament_python_install_package(${PROJECT_NAME})
-
-install(PROGRAMS
-  scripts/moveJoint.py
-  DESTINATION lib/${PROJECT_NAME}
-)
-
 install(
-  DIRECTORY launch description description/meshes worlds config scripts
+  DIRECTORY launch description description/meshes worlds config
   DESTINATION share/${PROJECT_NAME}
 )
-
 
 ament_package()
